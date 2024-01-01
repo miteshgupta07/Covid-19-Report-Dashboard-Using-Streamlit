@@ -7,13 +7,32 @@ The Covid-19 Report Dashboard using Streamlit is a data visualization project th
 - **Interactive Visualization:** Utilizes Streamlit to create dynamic and responsive charts and graphs.
 
 - **Filtering and Sorting:** Allows users to filter and sort data based on various parameters.
+- 
 - **User-Friendly Interface:** Simple and intuitive interface for users to navigate and explore the data.
 
 ## Dashboard Screenshot
 
-![Screenshot (57)](https://github.com/miteshgupta07/temp/assets/111682782/82c1726e-0c92-4262-b68a-5c206adae34e)
+![Screenshot (57)](https://github.com/miteshgupta07/Covid-19-Report-Dashboard-Using-Streamlit/assets/111682782/ad7ccd62-c62f-455b-bef4-ab4d7a127006)
+![Screenshot (58)](https://github.com/miteshgupta07/Covid-19-Report-Dashboard-Using-Streamlit/assets/111682782/cf03e2bd-a9d2-4bba-b43c-094831f6930b)
 
-![Screenshot (58)](https://github.com/miteshgupta07/temp/assets/111682782/425546f4-4a06-4cbb-adcc-15aaa1ccb885)
+## Prerequisites
+- Python 3.8
+- Dependencies List:
+  - **Streamlit:** A framework for creating web applications easily with Python.
+    - Install: `pip install streamlit`
+    - Purpose: Used to build the interactive web interface for the application.
+
+  - **Pandas:** A powerful data manipulation and analysis library.
+    - Install: `pip install pandas`
+    - Purpose: Used for handling and processing structured data.
+
+  - **Matplotlib:** A comprehensive library for creating static, interactive, and animated plots.
+    - Install: `pip install matplotlib`
+    - Purpose: Essential for generating various types of plots and charts.
+
+ - **mplcyberpunk:** A Matplotlib style for creating cyberpunk-style plots.
+    - Install: `pip install mplcyberpunk`
+    - Purpose: Used for adding cyberpunk aesthetics to Matplotlib plots.
 
 ## Acknowledgements
 
