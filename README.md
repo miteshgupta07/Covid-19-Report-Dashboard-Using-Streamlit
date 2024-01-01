@@ -7,7 +7,7 @@ The Covid-19 Report Dashboard using Streamlit is a data visualization project th
 - **Interactive Visualization:** Utilizes Streamlit to create dynamic and responsive charts and graphs.
 
 - **Filtering and Sorting:** Allows users to filter and sort data based on various parameters.
-- 
+  
 - **User-Friendly Interface:** Simple and intuitive interface for users to navigate and explore the data.
 
 ## Dashboard Screenshot
