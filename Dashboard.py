@@ -1,3 +1,4 @@
+# Import necessary libraries
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,18 +7,21 @@ from PIL import Image
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-img = Image.open("E:\Data Science\Project\Covid-19 Report\Image\img-1.jpeg")
+# Load image for display
+img = Image.open("img-1.jpeg")
 st.image(img)
 st.title('Covid-19 Report Dashboard for Berlin City')
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Display a link to the developer's LinkedIn profile in the sidebar
 link = '[*©Developed by Mitesh Gupta*](https://www.linkedin.com/in/mitesh-gupta/)'
 st.sidebar.markdown(link, unsafe_allow_html=True)
 st.write('---')
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Display introductory text about the dashboard
 st.write("""
          
 This dashboard provides daily updates of the following\n
@@ -35,8 +39,8 @@ st.write("---")
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Getting Data
-data=pd.read_csv("E:\Data Science\Project\Covid-19 Report\Dataset\Covid Case.csv",sep=';')
+# Load Covid-19 case data for Berlin from a CSV file
+data=pd.read_csv("Covid Case.csv",sep=';')
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -160,7 +164,6 @@ plt.title('Seven Day Incidence - Last ' + str(no_of_days) + ' Days', color = '1'
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #mplcyberpunk glow effects if checkbox selected
-
 legend = plt.legend(selected_cities,loc='upper right')
 if (glow_effect_checkbox and gradient_fill_checkbox):
     mplcyberpunk.add_glow_effects()
@@ -178,7 +181,6 @@ st.pyplot(fig)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Displaying the plot and the last 7 days' values
-    
 st.write("#### Last 7 Days Incedence")
 st.table(incidence.iloc[-7:,:])
 
@@ -191,7 +193,6 @@ st.write('This chart shows a [rolling 7-day-average](https://en.wikipedia.org/wi
 st.write('This smoothes out the spikes somewhat and makes it easier to identify the real trend in cases.')
 
 # Plotting the 7 day average
-
 data = data_to_plot.iloc[-no_of_days:,:]
 
 fig, ax = plt.subplots()
@@ -211,7 +212,6 @@ plt.title('Rolling 7-day-average - Last ' + str(no_of_days) + ' Days', color = '
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # mplcyberpunk glow effects if checkbox selected
-
 legend = plt.legend(selected_cities,loc='upper right')
 if (glow_effect_checkbox and gradient_fill_checkbox):
     mplcyberpunk.add_glow_effects()
@@ -236,7 +236,6 @@ st.write('---')
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Plotting the new cases
-
 st.write('## Newly Reported Cases')
 st.write('This chart shows the raw number of new reported cases in the selected City(s).')
 st.write("This will show larger variance and generally be 'noisier' than the 7-day-average chart.")
@@ -244,10 +243,7 @@ st.write('Notice that the numbers tend to dip to near zero on weekends and spike
 
 new_cases = new_cases.iloc[-no_of_days:,:]
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 fig, ax = plt.subplots()
-
 for i in selected_cities:
     plt.plot(new_cases['Date'], new_cases[i])
 
@@ -263,7 +259,6 @@ plt.title('New Reported Cases - Last ' + str(no_of_days) + ' Days', color='1')
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # mplcyberpunk glow effects if checkbox selected
-
 legend = plt.legend(selected_cities,loc='upper right')
 if (glow_effect_checkbox and gradient_fill_checkbox):
     mplcyberpunk.add_glow_effects()
@@ -281,7 +276,6 @@ st.pyplot(fig)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Displaying the plot and the last 7 days' values
-
 number_to_limit_table = len(selected_cities) + 1 
 st.table(new_cases.iloc[-7:,:number_to_limit_table])
 
