@@ -48,7 +48,7 @@ The Covid-19 Report Dashboard using Streamlit is a data visualization project th
   
 - **Covid-19 Data Providers:** Gratitude to the organizations providing reliable and up-to-date Covid-19 data.
 ## Contact
-Email : mgmiteshgupta134@gmail.com
+Email : miteshgupta2711@gmail.com
 
 Linkedin : https://www.linkedin.com/in/mitesh-gupta/
 
