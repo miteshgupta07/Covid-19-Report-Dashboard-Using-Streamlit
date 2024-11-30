@@ -3,6 +3,8 @@
 
 The Covid-19 Report Dashboard using Streamlit is a data visualization project that leverages Streamlit, a Python library for creating web applications with minimal effort. This dashboard provides an interactive and user-friendly way to explore and analyze Covid-19 data, offering insights into the global pandemic.
 
+**Deployed Version:** You can access the live version of the dashboard on the Streamlit platform [here](https://covid-19-report-dashboard.streamlit.app/).
+
 ## Features
 
 - **Interactive Visualization:** Utilizes Streamlit to create dynamic and responsive charts and graphs.
